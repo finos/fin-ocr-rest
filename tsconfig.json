@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "declaration": true,
+    "outDir": "./build",
+    "esModuleInterop": true,
+    "experimentalDecorators": true,
+    "strict": true,
+    "paths": {}
+  },
+  "include": ["src"],
+  "exclude": ["node_modules", "**/__tests__/*"]
+}
