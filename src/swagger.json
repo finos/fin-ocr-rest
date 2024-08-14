@@ -1,0 +1,437 @@
+{
+	"openapi": "3.0.0",
+	"components": {
+		"examples": {},
+		"headers": {},
+		"parameters": {},
+		"requestBodies": {},
+		"responses": {},
+		"schemas": {
+			"HealthResponse": {
+				"properties": {
+					"status": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"status"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CheckInfo": {
+				"properties": {
+					"routingNumber": {
+						"type": "string"
+					},
+					"accountNumber": {
+						"type": "string"
+					},
+					"checkNumber": {
+						"type": "string"
+					},
+					"micrLine": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"routingNumber",
+					"accountNumber",
+					"checkNumber",
+					"micrLine"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TranslatorChoice": {
+				"properties": {
+					"value": {
+						"type": "string"
+					},
+					"score": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"required": [
+					"value",
+					"score"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"TranslatorChar": {
+				"properties": {
+					"choices": {
+						"items": {
+							"$ref": "#/components/schemas/TranslatorChoice"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"choices"
+				],
+				"type": "object"
+			},
+			"TranslatorResult": {
+				"properties": {
+					"value": {
+						"type": "string"
+					},
+					"score": {
+						"type": "number",
+						"format": "double"
+					},
+					"chars": {
+						"items": {
+							"$ref": "#/components/schemas/TranslatorChar"
+						},
+						"type": "array"
+					}
+				},
+				"required": [
+					"value",
+					"score",
+					"chars"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CheckScanTranslatorResponse": {
+				"properties": {
+					"result": {
+						"$ref": "#/components/schemas/CheckInfo"
+					},
+					"details": {
+						"$ref": "#/components/schemas/TranslatorResult"
+					}
+				},
+				"required": [
+					"result"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CheckScanTranslatorsResponse": {
+				"properties": {},
+				"additionalProperties": {
+					"$ref": "#/components/schemas/CheckScanTranslatorResponse"
+				},
+				"type": "object"
+			},
+			"ImageBuffer": {
+				"anyOf": [
+					{
+						"type": "string"
+					},
+					{}
+				]
+			},
+			"NamedImageInfo": {
+				"properties": {
+					"format": {
+						"type": "string"
+					},
+					"buffer": {
+						"$ref": "#/components/schemas/ImageBuffer"
+					},
+					"width": {
+						"type": "number",
+						"format": "double"
+					},
+					"height": {
+						"type": "number",
+						"format": "double"
+					},
+					"name": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"format",
+					"buffer",
+					"width",
+					"height",
+					"name"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CheckScanResponse": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"images": {
+						"items": {
+							"$ref": "#/components/schemas/NamedImageInfo"
+						},
+						"type": "array"
+					},
+					"overlap": {
+						"type": "boolean"
+					},
+					"translators": {
+						"$ref": "#/components/schemas/CheckScanTranslatorsResponse"
+					},
+					"match": {
+						"type": "boolean"
+					}
+				},
+				"required": [
+					"id",
+					"translators"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"ImageInput": {
+				"properties": {
+					"format": {
+						"type": "string"
+					},
+					"buffer": {
+						"$ref": "#/components/schemas/ImageBuffer"
+					}
+				},
+				"required": [
+					"format",
+					"buffer"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CropFraction": {
+				"properties": {
+					"height": {
+						"type": "number",
+						"format": "double"
+					},
+					"width": {
+						"type": "number",
+						"format": "double"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CropArgs": {
+				"properties": {
+					"begin": {
+						"$ref": "#/components/schemas/CropFraction"
+					},
+					"end": {
+						"$ref": "#/components/schemas/CropFraction"
+					}
+				},
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CheckScanRequest": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"image": {
+						"$ref": "#/components/schemas/ImageInput"
+					},
+					"crop": {
+						"$ref": "#/components/schemas/CropArgs"
+					},
+					"debug": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"logLevel": {
+						"type": "string"
+					},
+					"translators": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"correct": {
+						"type": "boolean"
+					},
+					"actual": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"image"
+				],
+				"type": "object",
+				"additionalProperties": false
+			},
+			"CheckPreprocessRequest": {
+				"properties": {
+					"id": {
+						"type": "string"
+					},
+					"image": {
+						"$ref": "#/components/schemas/ImageInput"
+					},
+					"crop": {
+						"$ref": "#/components/schemas/CropArgs"
+					},
+					"debug": {
+						"items": {
+							"type": "string"
+						},
+						"type": "array"
+					},
+					"logLevel": {
+						"type": "string"
+					}
+				},
+				"required": [
+					"id",
+					"image"
+				],
+				"type": "object",
+				"additionalProperties": false
+			}
+		},
+		"securitySchemes": {}
+	},
+	"info": {
+		"title": "fin-ocr-web",
+		"version": "1.0.0",
+		"description": "OCR REST-ful service",
+		"license": {
+			"name": "ISC"
+		},
+		"contact": {
+			"name": "Keith Smith ",
+			"email": "keithsmith@discover.com"
+		}
+	},
+	"paths": {
+		"/health": {
+			"get": {
+				"operationId": "Health",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/HealthResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": []
+			}
+		},
+		"/check/scanFile": {
+			"post": {
+				"operationId": "UploadFile",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/CheckScanResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"multipart/form-data": {
+							"schema": {
+								"type": "object",
+								"properties": {
+									"image": {
+										"type": "string",
+										"format": "binary"
+									},
+									"id": {
+										"type": "string"
+									}
+								},
+								"required": [
+									"image"
+								]
+							}
+						}
+					}
+				}
+			}
+		},
+		"/check/scan": {
+			"post": {
+				"operationId": "Scan",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {
+									"$ref": "#/components/schemas/CheckScanResponse"
+								}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CheckScanRequest"
+							}
+						}
+					}
+				}
+			}
+		},
+		"/check/preprocess": {
+			"post": {
+				"operationId": "Preprocess",
+				"responses": {
+					"200": {
+						"description": "Ok",
+						"content": {
+							"application/json": {
+								"schema": {}
+							}
+						}
+					}
+				},
+				"security": [],
+				"parameters": [],
+				"requestBody": {
+					"required": true,
+					"content": {
+						"application/json": {
+							"schema": {
+								"$ref": "#/components/schemas/CheckPreprocessRequest"
+							}
+						}
+					}
+				}
+			}
+		}
+	},
+	"servers": [
+		{
+			"url": "/"
+		}
+	]
+}

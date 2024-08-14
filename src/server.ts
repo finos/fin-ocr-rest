@@ -8,6 +8,7 @@ import "./controllers/index.js";
 import { RegisterRoutes } from "./routes.js";
 import { ValidateError } from "tsoa";
 import * as ocr from "@discoverfinancial/fin-ocr-sdk";
+import swaggerJson from "./swagger.json" assert { type: "json" };
 
 const log = ocr.Log.new("ocr-web", process.env.LOG_LEVEL);
 
@@ -121,9 +122,8 @@ export class Server {
 
   // Swagger middleware
   private async serveSwagger(_req: Request, res: Response) {
-    return res.send(
-      swaggerUi.generateHTML(await import("../build/swagger.json"))
-    );
+    return res.send(swaggerUi.generateHTML(swaggerJson));
   }
+
 
 }
