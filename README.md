@@ -170,7 +170,7 @@ This endpoint is utilized to scan a check image and return the check's routing, 
 
 #### Example Using curl:
 ```bash
-curl -vvvv http://localhost:3000/check/scanFile -F "image=@check_sample_02.png"
+curl http://localhost:3000/check/scanFile -F "image=@check_sample_02.png"
 ```
 
 #### Example File Upload Response
