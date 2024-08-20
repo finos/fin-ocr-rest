@@ -300,7 +300,7 @@
 		"securitySchemes": {}
 	},
 	"info": {
-		"title": "fin-ocr-web",
+		"title": "fin-ocr-rest",
 		"version": "1.0.0",
 		"description": "OCR REST-ful service",
 		"license": {

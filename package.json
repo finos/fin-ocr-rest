@@ -1,5 +1,5 @@
 {
-  "name": "fin-ocr-web",
+  "name": "fin-ocr-rest",
   "type": "module",
   "version": "1.0.0",
   "description": "OCR REST-ful service",

@@ -17,7 +17,7 @@ Clone both the SDK and the web repositories:
 
 ```bash
 git clone https://github.com/discoverfinancial/fin-ocr-sdk.git
-git clone https://github.com/discoverfinancial/fin-ocr-web.git
+git clone https://github.com/discoverfinancial/fin-ocr-rest.git
 ```
 
 ### 2. Build and Link the SDK
@@ -74,10 +74,10 @@ If the normal global path for npm is restricted on your corporate machine, you c
 </details>
 
 ### 3. Install Dependencies and Build the Application
-Next, navigate to the fin-ocr-web directory and run the following commands to install the necessary dependencies and build the project:
+Next, navigate to the fin-ocr-rest directory and run the following commands to install the necessary dependencies and build the project:
 
 ```bash
-cd ../fin-ocr-web
+cd ../fin-ocr-rest
 npm link @discoverfinancial/fin-ocr-sdk
 npm run build
 ```
