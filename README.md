@@ -1,4 +1,4 @@
-# FIN-OCR-WEB
+# FIN-OCR-REST
 
 This project contains code for an OCR REST-ful service which takes a bank check image as input and returns the translated MICR (routing, account, and check numbers) in JSON format.
 
