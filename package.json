@@ -23,7 +23,6 @@
     "eng.traineddata"
   ],
   "keywords": [],
-  "author": "Keith Smith <keithsmith@discover.com>",
   "license": "ISC",
   "dependencies": {
     "@discoverfinancial/fin-ocr-sdk": "*",

@@ -305,10 +305,6 @@
 		"description": "OCR REST-ful service",
 		"license": {
 			"name": "ISC"
-		},
-		"contact": {
-			"name": "Keith Smith ",
-			"email": "keithsmith@discover.com"
 		}
 	},
 	"paths": {
