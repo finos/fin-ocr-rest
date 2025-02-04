@@ -225,7 +225,7 @@ The required fields of the response body are as follows:
 | translators | map | false    | none  | The per-translator values (depending on the value of the request's `translators` field) for the check's routing, account, and check numbers |
 
 ### Additional Fields in Response with debug Enabled
-The additional fields that in the response body if the request's `debug` field was set to true are as follows:
+The additional fields that are in the response body if the request's `debug` field was set to true are as follows:
 
 | Field name | type   | Optional | Default | Description          |
 | ---------- | ------ | -------- | ------- | -------------------- |
