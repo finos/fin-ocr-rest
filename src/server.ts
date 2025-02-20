@@ -8,7 +8,7 @@ import "./controllers/index.js";
 import { RegisterRoutes } from "./routes.js";
 import { ValidateError } from "tsoa";
 import * as ocr from "@discoverfinancial/fin-ocr-sdk";
-import swaggerJson from "./swagger.json" assert { type: "json" };
+import swaggerJson from "./swagger.json" with { type: "json" };
 
 const log = ocr.Log.new("ocr-web", process.env.LOG_LEVEL);
 
