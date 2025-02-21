@@ -9,8 +9,10 @@
     "build:dev": "NODE_ENV=development npm install && tsoa spec-and-routes && tsc",
     "build:prod": "NODE_ENV=production npm install && tsoa spec-and-routes && tsc",
     "start-tesseract": "OCR_TRANSLATORS=tesseract node --loader ts-node/esm src/main.ts",
-    "start": "node --loader ts-node/esm src/main.ts",
-    "debug": "LOG_LEVEL=debug node --loader ts-node/esm src/main.ts",
+    "start": "node --import=./src/register.js src/main.ts",
+    "debug": "LOG_LEVEL=debug node --import=./src/register.js src/main.ts",
+    "debug-inspect": "LOG_LEVEL=debug node --import=./src/register.js src/main.ts --inspect-brk",
+    "debug-inspect-brk": "LOG_LEVEL=debug node --import=./src/register.js --inspect src/main.ts",
     "test": "echo \"No tests currently\" && exit 0"
   },
   "files": [
