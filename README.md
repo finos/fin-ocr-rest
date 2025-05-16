@@ -1,4 +1,4 @@
-[![DFS - Incubating](./_images/discover-incubating.svg)](https://technology.discover.com/technologies/open_source) [![Contributors-Invited](https://img.shields.io/badge/Contributors-Wanted-blue)](./CONTRIBUTE.md)
+[![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg)](https://community.finos.org/docs/governance/Software-Projects/stages/incubating) [![Contributors-Invited](https://img.shields.io/badge/Contributors-Wanted-blue)](./CONTRIBUTE.md)
 # FIN-OCR-REST
 
 This project contains code for an OCR REST-ful service which takes a bank check image as input and returns the translated MICR (routing, account, and check numbers) in JSON format.
@@ -232,3 +232,31 @@ The additional fields that are in the response body if the request's `debug` fie
 | match      | boolean | true | none  | True if any of the translator's results matched the value passed in the request's `actual` field |
 | overlap    | boolean | true | none  | True if signature overlap of the MICR line was detected in the image |
 | images     | map array | true | none  | An array of name, format, base64 encoding, width, and height of each image generated during OCR processing |
+
+## Roadmap
+
+TBD
+
+## Contributing
+
+For any questions, bugs or feature requests please open an [issue](https://github.com/finos/fin-ocr/issues) For anything else please send an email to {project mailing list}.
+
+To submit a contribution:
+
+Fork it (<https://github.com/finos/fin-ocr-rest/fork>)
+Create your feature branch (git checkout -b feature/fooBar)
+Read our contribution guidelines and Community Code of Conduct
+Commit your changes (git commit -am 'Add some fooBar')
+Push to the branch (git push origin feature/fooBar)
+Create a new Pull Request
+NOTE: Commits and pull requests to FINOS repositories will only be accepted from those contributors with an active, executed Individual Contributor License Agreement (ICLA) with FINOS OR who are covered under an existing and active Corporate Contribution License Agreement (CCLA) executed with FINOS. Commits from individuals not covered under an ICLA or CCLA will be flagged and blocked by the FINOS Clabot tool (or EasyCLA). Please note that some CCLAs require individuals/employees to be explicitly named on the CCLA.
+
+Need an ICLA? Unsure if you are covered under an existing CCLA? Email help@finos.org
+
+## License
+
+Copyright 2024 Discover Financial Services
+
+Distributed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+
+SPDX-License-Identifier: [Apache-2.0](https://spdx.org/licenses/Apache-2.0)
