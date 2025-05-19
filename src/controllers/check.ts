@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2024 Discover Financial Services
+ * Copyright (c) 2024 Capital One
 */
 import * as express from "express";
 import { Body, Controller, Post, Route, Request,FormField, UploadedFiles, UploadedFile } from "tsoa";

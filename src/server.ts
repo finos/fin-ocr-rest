@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2024 Discover Financial Services
+ * Copyright (c) 2024 Capital One
 */
 import express, { Request, Response, NextFunction } from "express";
 import bodyParser from "body-parser";
