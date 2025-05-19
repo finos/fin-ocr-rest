@@ -253,6 +253,23 @@ NOTE: Commits and pull requests to FINOS repositories will only be accepted from
 
 Need an ICLA? Unsure if you are covered under an existing CCLA? Email help@finos.org
 
+## Scans
+### Vulnerability Report
+
+To generate a report containing any vulnerabilities in any dependency please use:
+
+```bash
+$npm run scan
+```
+
+### License Report
+
+```bash
+npm run scan-license
+```
+
+**Note:** Each of these scans should be run and problems addressed by a developer prior to submitting code that uses new packages.
+
 ## License
 
 Copyright 2024 Capital One
