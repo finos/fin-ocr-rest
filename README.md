@@ -239,19 +239,9 @@ TBD
 
 ## Contributing
 
-For any questions, bugs or feature requests please open an [issue](https://github.com/finos/fin-ocr/issues) For anything else please send an email to {project mailing list}.
+This document provides guidance for how YOU can collaborate with our project community to improve this technology.
 
-To submit a contribution:
-
-Fork it (<https://github.com/finos/fin-ocr-rest/fork>)
-Create your feature branch (git checkout -b feature/fooBar)
-Read our contribution guidelines and Community Code of Conduct
-Commit your changes (git commit -am 'Add some fooBar')
-Push to the branch (git push origin feature/fooBar)
-Create a new Pull Request
-NOTE: Commits and pull requests to FINOS repositories will only be accepted from those contributors with an active, executed Individual Contributor License Agreement (ICLA) with FINOS OR who are covered under an existing and active Corporate Contribution License Agreement (CCLA) executed with FINOS. Commits from individuals not covered under an ICLA or CCLA will be flagged and blocked by the FINOS Clabot tool (or EasyCLA). Please note that some CCLAs require individuals/employees to be explicitly named on the CCLA.
-
-Need an ICLA? Unsure if you are covered under an existing CCLA? Email help@finos.org
+[FIN-OCR Contribution](https://github.com/finos/fin-ocr/blob/main/CONTRIBUTE.md)
 
 ## Scans
 ### Vulnerability Report
