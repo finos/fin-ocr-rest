@@ -1,4 +1,4 @@
-[![DFS - Incubating](./_images/discover-incubating.svg)](https://technology.discover.com/technologies/open_source) [![Contributors-Invited](https://img.shields.io/badge/Contributors-Wanted-blue)](./CONTRIBUTE.md)
+[![FINOS - Incubating](https://cdn.jsdelivr.net/gh/finos/contrib-toolbox@master/images/badge-incubating.svg)](https://community.finos.org/docs/governance/Software-Projects/stages/incubating) [![Contributors-Invited](https://img.shields.io/badge/Contributors-Wanted-blue)](./CONTRIBUTE.md)
 # FIN-OCR-REST
 
 This project contains code for an OCR REST-ful service which takes a bank check image as input and returns the translated MICR (routing, account, and check numbers) in JSON format.
@@ -232,3 +232,38 @@ The additional fields that are in the response body if the request's `debug` fie
 | match      | boolean | true | none  | True if any of the translator's results matched the value passed in the request's `actual` field |
 | overlap    | boolean | true | none  | True if signature overlap of the MICR line was detected in the image |
 | images     | map array | true | none  | An array of name, format, base64 encoding, width, and height of each image generated during OCR processing |
+
+## Roadmap
+
+TBD
+
+## Contributing
+
+This document provides guidance for how YOU can collaborate with our project community to improve this technology.
+
+[FIN-OCR Contribution](https://github.com/finos/fin-ocr/blob/main/CONTRIBUTE.md)
+
+## Scans
+### Vulnerability Report
+
+To generate a report containing any vulnerabilities in any dependency please use:
+
+```bash
+$npm run scan
+```
+
+### License Report
+
+```bash
+npm run scan-license
+```
+
+**Note:** Each of these scans should be run and problems addressed by a developer prior to submitting code that uses new packages.
+
+## License
+
+Copyright 2024 Capital One
+
+Distributed under the [Apache License, Version 2.0](http://www.apache.org/licenses/LICENSE-2.0).
+
+SPDX-License-Identifier: [Apache-2.0](https://spdx.org/licenses/Apache-2.0)

@@ -1,5 +1,5 @@
 /**
- * Copyright (c) 2024 Discover Financial Services
+ * Copyright (c) 2024 Capital One
 */
 import { Controller, Get, Route } from "tsoa";
 
