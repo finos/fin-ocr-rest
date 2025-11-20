@@ -13,76 +13,21 @@ Ensure you have the following installed on your system:
 
 ## Installation Steps
 
-### 1. Clone the SDK and Web Repositories
+### 1. Clone the Web Repository
 Clone both the SDK and the web repositories:
 
 ```bash
-git clone https://github.com/discoverfinancial/fin-ocr-sdk.git
 git clone https://github.com/discoverfinancial/fin-ocr-rest.git
 ```
 
-### 2. Build and Link the SDK
-Navigate to the SDK directory, install dependencies, build it, and link it globally:
-
-```bash
-cd fin-ocr-sdk
-npm run build
-npm link
-```
-
-<details>
-<summary><strong>Note for users with restricted npm global path</strong></summary>
-
-If the normal global path for npm is restricted on your corporate machine, you can still use `npm link` by following these steps:
-
-### For Unix-like Systems (Linux/macOS):
-
-1. **Set up a local npm prefix:**
-   - Configure npm to use a local directory for global installations. This allows you to use `npm link` without requiring access to the restricted global path.
-   - Run the following command:
-     ```bash
-     npm config set prefix ~/.npm-global
-     ```
-   - This changes the global installation directory to `~/.npm-global`, which should be accessible even with corporate restrictions.
-
-2. **Add the new npm global directory to your PATH:**
-   - Add the following line to your `.bashrc`, `.zshrc`, or corresponding shell configuration file:
-     ```bash
-     export PATH=~/.npm-global/bin:$PATH
-     ```
-   - Then, source the file to update your current shell session:
-     ```bash
-     source ~/.bashrc  # or source ~/.zshrc
-     ```
-
-3. **Use `npm link` as usual:**
-
-### For Windows Users:
-
-1. **Set up a local npm prefix:**
-   - Configure npm to use a local directory for global installations by running the following command in your terminal (Command Prompt or PowerShell):
-     ```bash
-     npm config set prefix "%USERPROFILE%\npm-global"
-     ```
-   - This changes the global installation directory to `%USERPROFILE%\npm-global`, which is within your user profile and should be accessible despite corporate restrictions.
-
-2. **Add the new npm global directory to your PATH:**
-   - Open the Environment Variables settings in Windows.
-   - Add `%USERPROFILE%\npm-global\bin` to your `PATH` variable.
-
-3. **Use `npm link` as usual:**
-
-</details>
-
-### 3. Install Dependencies and Build the Application
+### 2. Install Dependencies and Build the Application
 Next, navigate to the fin-ocr-rest directory and run the following commands to install the necessary dependencies and build the project:
 
 ```bash
-cd ../fin-ocr-rest
-npm link @discoverfinancial/fin-ocr-sdk
+cd fin-ocr-rest
 npm run build
 ```
-#### 4 Running the Application
+#### 3. Running the Application
 
 To start the server on the default port 3000:
 

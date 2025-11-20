@@ -304,8 +304,9 @@
 		"version": "1.0.0",
 		"description": "OCR REST-ful service",
 		"license": {
-			"name": "ISC"
-		}
+			"name": "Apache-2.0"
+		},
+		"contact": {}
 	},
 	"paths": {
 		"/health": {
