@@ -3,7 +3,7 @@
 */
 import * as express from "express";
 import { Body, Controller, Post, Route, Request,FormField, UploadedFiles, UploadedFile } from "tsoa";
-import * as ocr from "@discoverfinancial/fin-ocr-sdk";
+import * as ocr from "@finos/fin-ocr-sdk";
 import multer from "multer";
 const upload = multer({
   limits: { fileSize: 10 * 1024 * 1024 },// Optional: Limit file size to 10MB
