@@ -6,10 +6,10 @@ This file lists the maintainers of this repository.
 
 | GitHub Username | Name | Organization | Email |
 |----------------|------|--------------|-------|
-| @aaronreed708 | *please add name* | *please add organization* | *please add email* |
-| @evangk6 | Evan Kountouris | *please add organization* | *please add email* |
-| @mtnat | *please add name* | *please add organization* | *please add email* |
-| @smithbk | Keith Smith | Discover Financial Services | *please add email* |
+| @aaronreed708 | *please add name* | *please add organization* |  |
+| @evangk6 | Evan Kountouris | *please add organization* |  |
+| @mtnat | *please add name* | *please add organization* |  |
+| @smithbk | Keith Smith | Discover Financial Services |  |
 
 For information about maintainer responsibilities and resources, see the [FINOS Maintainers Cheatsheet](https://community.finos.org/docs/finos-maintainers-cheatsheet).
 
